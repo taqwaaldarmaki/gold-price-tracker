@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="الذهب العُماني">
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0.45" stop-color="#fbbf24" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="metal" x1="12" y1="10" x2="52" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff6cf"/>
+      <stop offset="0.22" stop-color="#f8d675"/>
+      <stop offset="0.48" stop-color="#d9a032"/>
+      <stop offset="0.7" stop-color="#f6cf6a"/>
+      <stop offset="1" stop-color="#9a6713"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="52" y1="54" x2="12" y2="10" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff3bf"/>
+      <stop offset="0.5" stop-color="#b9801f"/>
+      <stop offset="1" stop-color="#ffe9a0"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+  </defs>
+
+  <!-- gold glow -->
+  <circle cx="32" cy="32" r="31" fill="url(#halo)" opacity="0.65"/>
+  <circle cx="32" cy="32" r="24" fill="#f59e0b" opacity="0.55" filter="url(#blur)"/>
+
+  <!-- coin -->
+  <circle cx="32" cy="32" r="22" fill="url(#metal)"/>
+  <circle cx="32" cy="32" r="21" fill="none" stroke="url(#rim)" stroke-width="2.4"/>
+  <circle cx="32" cy="32" r="16.5" fill="none" stroke="#8a5a12" stroke-opacity="0.55" stroke-width="1"/>
+  <circle cx="32" cy="32.8" r="16.5" fill="none" stroke="#fff3c0" stroke-opacity="0.5" stroke-width="0.8"/>
+
+  <!-- embossed sparkle -->
+  <path d="M32.9 21.4c.5 5.4 4.4 9.3 9.8 9.8-5.4.5-9.3 4.4-9.8 9.8-.5-5.4-4.4-9.3-9.8-9.8 5.4-.5 9.3-4.4 9.8-9.8z" fill="#fff3c0" opacity="0.7"/>
+  <path d="M32 20.5c.5 5.4 4.4 9.3 9.8 9.8-5.4.5-9.3 4.4-9.8 9.8-.5-5.4-4.4-9.3-9.8-9.8 5.4-.5 9.3-4.4 9.8-9.8z" fill="#8a5a12"/>
+
+  <!-- specular highlight -->
+  <path d="M16 26a17 17 0 0 1 14-12" fill="none" stroke="url(#shine)" stroke-width="3" stroke-linecap="round"/>
+</svg>

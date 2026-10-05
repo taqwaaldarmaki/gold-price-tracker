@@ -1,0 +1,9 @@
+<button
+  type="button"
+  (click)="i18n.toggle()"
+  [attr.lang]="targetLang()"
+  [attr.aria-label]="i18n.t('languageToggleAria')"
+  class="inline-flex h-9 items-center justify-center rounded-full border border-line px-3.5 text-xs font-medium text-muted transition hover:border-accent hover:text-ink"
+>
+  {{ i18n.t('languageToggleLabel') }}
+</button>

@@ -1,0 +1,14 @@
+<section id="prices" class="scroll-mt-16 py-14">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+    <app-section-title [title]="i18n.t('pricesTitle')" [subtitle]="i18n.t('pricesSubtitle')" />
+
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4" [attr.aria-busy]="isLoading()">
+      @for (gold of goldPrices; track gold.karat) {
+        <app-price-card [karat]="gold.karat" [price]="gold.price" [loading]="isLoading()" />
+      }
+    </div>
+
+
+  </div>
+</section>

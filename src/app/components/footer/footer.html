@@ -1,0 +1,16 @@
+<footer class="border-t border-line">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-5 sm:px-6 lg:px-8">
+
+    <p class="text-xs text-muted">{{ i18n.t('builtBy') }}</p>
+
+    <button
+      type="button"
+      (click)="scrollToTop()"
+      class="group inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-xs text-muted transition hover:border-accent hover:text-ink"
+    >
+      {{ i18n.t('backToTop') }}
+      <app-icon name="arrow-up" class="size-3.5 transition-transform group-hover:-translate-y-0.5" />
+    </button>
+
+  </div>
+</footer>

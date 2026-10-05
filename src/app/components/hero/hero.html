@@ -1,0 +1,62 @@
+<!-- The hero is always dark (in both themes) and kept compact. -->
+<section class="relative overflow-hidden bg-[#04050b] text-white">
+
+  <!-- Blue glow -->
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+    <div class="absolute -bottom-32 -end-32 h-64 w-[80%] rotate-[-8deg] rounded-full bg-linear-to-r from-transparent via-blue-600 to-blue-300 opacity-90 blur-3xl rtl:rotate-[8deg] rtl:bg-linear-to-l"></div>
+    <div class="absolute -bottom-24 -end-16 h-36 w-[35%] rounded-full bg-white/80 blur-3xl"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
+
+    <div class="flex items-end justify-between gap-6">
+
+      <div class="max-w-2xl">
+
+        <!-- Breadcrumb -->
+        <p class="mb-5 text-xs text-white/60">
+          {{ i18n.t('breadcrumbHome') }}
+          <span class="mx-1.5">/</span>
+          {{ i18n.t('breadcrumbPage') }}
+        </p>
+
+        <span class="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs text-white/80">
+          <app-icon name="sparkle" class="size-3" />
+          {{ i18n.t('heroBadge') }}
+        </span>
+
+        <h1 class="text-3xl font-light leading-tight tracking-tight sm:text-5xl">
+          {{ i18n.t('heroTitle') }}
+        </h1>
+
+        <p class="mt-3 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
+          {{ i18n.t('heroText') }}
+        </p>
+
+      </div>
+
+      <!-- Decorative rotating badge -->
+      <div aria-hidden="true" class="relative hidden size-24 shrink-0 sm:block">
+        <svg viewBox="0 0 96 96" class="absolute inset-0 size-full motion-safe:animate-spin-slow">
+          <circle cx="48" cy="48" r="45" fill="none" stroke="white" stroke-opacity="0.45" stroke-width="2" stroke-dasharray="1 6" stroke-linecap="round" />
+          <circle cx="48" cy="48" r="34" fill="none" stroke="white" stroke-opacity="0.2" />
+        </svg>
+        <app-icon name="sparkle" class="absolute start-1/2 top-1/2 size-6 -translate-y-1/2 text-white ltr:-translate-x-1/2 rtl:translate-x-1/2" />
+      </div>
+
+    </div>
+
+    <!-- Info Bar -->
+    <div class="mt-8 flex flex-wrap gap-x-10 gap-y-2 border-t border-white/15 pt-4 text-sm">
+      <p>
+        <span class="text-white/60">{{ i18n.t('lastUpdated') }}:</span>
+        <span class="ms-1 font-medium">{{ i18n.formatFullDate(lastUpdated) }}</span>
+      </p>
+      <p>
+        <span class="text-white/60">{{ i18n.t('market') }}:</span>
+        <span class="ms-1 font-medium">{{ i18n.t('marketValue') }}</span>
+      </p>
+    </div>
+
+  </div>
+</section>
